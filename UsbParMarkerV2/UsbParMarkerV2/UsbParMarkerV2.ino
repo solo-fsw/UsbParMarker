@@ -1,6 +1,8 @@
 /*
   Usb Parallel Marker Versie 1 Build 1 10-1-2018
   Copyright Leiden University - SOLO
+20180110  1.0 Initial release
+20220214  1.1 Added command mode to make it possible for reading serial number
 */
 
 /* IMPORTANT NOTE
@@ -16,14 +18,14 @@
 #include <EEPROM.h>
 
 //Globals
-const String Version = "1.0";
+const String Version = "1.1";
 const String Serialno;
 
 void setup() {
   DDRD = 0xFF; //PortD all pins output
   PORTD = 0x00;
   Serial.begin(115200);     // opens serial port, sets data rate to 115200 bps
- // writeStringToEEPROM(10, "S12345");
+  //writeStringToEEPROM(10, "S01018");    //Use ones to program te serial number in the device
   Serialno = readStringFromEEPROM(10);
 }
 
