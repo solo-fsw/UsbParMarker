@@ -1,2 +1,0 @@
-Sample task on how to send markers when using the USBParMarker cable. More information on sending markers with E-Prime using the USBParMarker can be found on our Wiki: 
-https://researchwiki.solo.universiteitleiden.nl/xwiki/wiki/researchwiki.solo.universiteitleiden.nl/view/Software/E-Prime/Sending%20markers%20from%20E-Prime%20to%20the%20serial%20port%20%28USBParMarker%29/
