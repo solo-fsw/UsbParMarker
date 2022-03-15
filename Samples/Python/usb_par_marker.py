@@ -6,12 +6,11 @@ def send_command(ser_device, command):
 
     else:
         if type(command) == str:
-            ser_device.write(command.encode())
+            ser_device.write(command.encode()) 
+            data = ser_device.readline()
+            decoded_data = data.decode('utf-8')
         elif type(command) == int:
             ser_device.write(bytearray([command]))
-
-        data = ser_device.readline()
-        decoded_data = data.decode('utf-8')
 
     return decoded_data
 
