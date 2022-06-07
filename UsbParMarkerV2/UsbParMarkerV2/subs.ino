@@ -39,6 +39,14 @@ void handlecommands() {
     case 'P':
       Serial.println("Pong,UsbParMarker");
       break;
+    case 'L':
+      digitalWrite(LEDCC, LOW);
+      Serial.println("LedsOn");
+      break;
+    case 'O':
+      digitalWrite(LEDCC, HIGH);
+      Serial.println("LedsOff");
+      break;
 
     default:
       Serial.println("Unknown command");
