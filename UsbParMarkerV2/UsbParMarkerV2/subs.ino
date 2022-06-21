@@ -21,13 +21,13 @@ String readStringFromEEPROM(int addrOffset)
 }
 
 void DumpMyInfo() {
-  Serial.print("{Version:\"");
+  Serial.print("{\"Version\":\"");
   Serial.print(Version);
   Serial.print("\",");
-  Serial.print("Serialno:\"");
+  Serial.print("\"Serialno\":\"");
   Serial.print(Serialno);
   Serial.print("\",");
-  Serial.println("Device:\"UsbParMarker\"}");
+  Serial.println("\"Device\":\"UsbParMarker\"}");
   //Serial.write(ETX);
 }
 
@@ -39,6 +39,7 @@ void handlecommands() {
     case 'P':
       Serial.println("Pong,UsbParMarker");
       break;
+//#ifdef HwVer "HW3"
     case 'L':
       digitalWrite(LEDCC, LOW);
       Serial.println("LedsOn");
@@ -47,6 +48,8 @@ void handlecommands() {
       digitalWrite(LEDCC, HIGH);
       Serial.println("LedsOff");
       break;
+//#endif
+
 
     default:
       Serial.println("Unknown command");
