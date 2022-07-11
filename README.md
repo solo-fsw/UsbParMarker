@@ -1,6 +1,6 @@
 <!-- About -->
 ## Usb Parmarker
-The Usb Parmarker is a replacement for parellel port to send markers. 
+The Usb Parmarker is a replacement for parallel port to send markers. 
 <p>No modern laptop has a parallel port anymore nor a possibilty to use a dock with parallel port.
 <p>To send easy markers from desktop or laptop you can use this Usb Parmarker. 
 <p>From version 1.5 the Usb Parmarker is also compatible with Tobii Pro Lab. Choose in Tobii ** Brain Products Triggerbox**. 
@@ -24,7 +24,7 @@ To put the Usb Parmarker in command mode, (re)open the serial port in 4800 baud.
 
 <!-- Timing -->
 ## Timing
-Timing is tested with a simple E-prime 3.0.380 script that will sens first a marker toe the parallel port and then to Usb Parmarker serial port.
+Timing is tested with a simple E-prime 3.0.380 script that will send first a marker to the parallel port and then to Usb Parmarker serial port.
 
 
 
