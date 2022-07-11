@@ -33,7 +33,6 @@ serialmarker.WriteByte 1
 sleep (30)
 writeport LPTAddress,0
 serialmarker.WriteByte 0
-
 sleep (3000)
 Loop
 ```
