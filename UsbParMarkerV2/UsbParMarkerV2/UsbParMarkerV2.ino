@@ -11,6 +11,7 @@
   20220518  1.2 Added hardware version to VERSION for upcoming futures
   20220531  1.3 Added L and O to switch On or Off the leds
   20220620  1.4 MyInfo String was not a valid Json String, moved HW version to eeprom.
+  20220711  1.5 To Make the UsbParmarker compatibel with the BrainBox Trigger box for Tobii Pro Lab, added 9600 baud for data mode
 
 */
 
@@ -28,7 +29,7 @@
 #include <EEPROM.h>
 
 //Globals
-const String SwVer = "SW1.4";
+const String SwVer = "SW1.5";
 const String Version; 
 const String Serialno;
 const String HwVer;
@@ -48,7 +49,7 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.baud() == 115200) {    //data mode
+  if (Serial.baud() == 115200 || Serial.baud() == 9600 ) {    //data mode
     if (Serial.available() > 0) {
       PORTD = Serial.read();       //send marker to output port
     }
