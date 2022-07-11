@@ -3,7 +3,7 @@
 The Usb Parmarker is a replacement for parallel port to send markers. 
 <p>No modern laptop has a parallel port anymore nor a possibilty to use a dock with parallel port.
 <p>To send easy markers from desktop or laptop you can use this Usb Parmarker. 
-<p>From version 1.5 the Usb Parmarker is also compatible with Tobii Pro Lab. Choose in Tobii ** Brain Products Triggerbox**. 
+<p>From version 1.5 the Usb Parmarker is also compatible with Tobii Pro Lab. Choose in Tobii **Brain Products Triggerbox** . 
 
 <!-- Data mode -->
 ## Data Mode
