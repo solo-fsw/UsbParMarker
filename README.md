@@ -7,12 +7,12 @@ The Usb Parmarker is a replacement for parallel port to send markers.
 
 <!-- Data mode -->
 ## Data Mode
-To send a value to Usb Parmarker, just send a bytes at 115200 baud. From version 1.5 9600 baud wil do also.
+To send a value to Usb Parmarker, just send a bytes at 115200 baud. From version 1.5 9600 baud wil also do.
 
 
 <!-- Command mode -->
 ## Command Mode
-To put the Usb Parmarker in command mode, (re)open the serial port in 4800 baud.
+To put the Usb Parmarker in command mode, (re)open the serial port at 4800 baud.
 
 | Function | Command | Returns | Type |Note
 | ------------- | ------------- | ------------- | ------------- | ------------- |
