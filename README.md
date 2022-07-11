@@ -26,10 +26,20 @@ To put the Usb Parmarker in command mode, (re)open the serial port at 4800 baud.
 ## Timing
 Timing is tested with a simple E-prime 3.0.380 script that will send first a marker to the parallel port and then to Usb Parmarker serial port.
 
+```
+Do
+writeport LPTAddress ,1
+serialmarker.WriteByte 1
+sleep (30)
+writeport LPTAddress,0
+serialmarker.WriteByte 0
 
+sleep (3000)
+Loop
+```
 
 
 ![DS1Z_QuickPrint15](https://user-images.githubusercontent.com/98744988/178240745-d304212d-964e-4b7c-9ecf-02f4bde72d45.png)
 
 Yellow line is the parallel output and the blue line the Usb Parmarker
-Avarage delay is 51us and peak 72us. 
+Avarage delay is 51us and peak 72us, tested with 50 trials.
