@@ -52,7 +52,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
@@ -162,13 +162,10 @@
 <board>
 <plain>
 <wire x1="0" y1="0" x2="0" y2="38" width="0" layer="20"/>
-<wire x1="0" y1="0" x2="-16" y2="0" width="0" layer="20"/>
-<wire x1="0" y1="38" x2="-16" y2="38" width="0" layer="20"/>
-<wire x1="-20" y1="26.5" x2="-25.8" y2="26.5" width="0" layer="20"/>
-<wire x1="-25.8" y1="11.5" x2="-20" y2="11.5" width="0" layer="20"/>
-<wire x1="-16" y1="38" x2="-20" y2="26.5" width="0" layer="20"/>
-<wire x1="-16" y1="0" x2="-20" y2="11.5" width="0" layer="20"/>
-<wire x1="-25.8" y1="26.5" x2="-25.8" y2="22.5" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="-15.99" y2="0" width="0" layer="20"/>
+<wire x1="-15.99" y1="0" x2="-16" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="38" x2="-15.99" y2="38" width="0" layer="20"/>
+<wire x1="-25.8" y1="30.005" x2="-25.8" y2="22.5" width="0" layer="20"/>
 <wire x1="-25.8" y1="11.5" x2="-25.8" y2="15.5" width="0" layer="20"/>
 <text x="-13.9" y="2" size="0.6096" layer="25" font="vector">1</text>
 <text x="-5.6" y="2" size="0.6096" layer="25" font="vector">1</text>
@@ -192,9 +189,20 @@
 <wire x1="-25.8" y1="22.5" x2="-21.29" y2="22.5" width="0" layer="20"/>
 <text x="-2.2072375" y="1.262403125" size="1.27" layer="22" font="vector" rot="MR0">Usb2Parallel</text>
 <text x="-8.173640625" y="36.90098125" size="1.016" layer="22" font="vector" rot="MR0" align="center">Universiteit Leiden</text>
-<text x="-18.7" y="12" size="0.8128" layer="21" font="vector" rot="R90">Evert Dekker 2022 V3.1</text>
+<text x="-18.7" y="12" size="0.8128" layer="21" font="vector" rot="R90">Evert Dekker 2022 V3.2</text>
 <wire x1="-21.29" y1="15.5" x2="-25.8" y2="15.5" width="0" layer="20"/>
 <wire x1="-21.29" y1="22.5" x2="-21.29" y2="15.5" width="0" layer="20"/>
+<hole x="-22.4" y="8" drill="3.2"/>
+<hole x="-22.4" y="30" drill="3.2"/>
+<wire x1="-22.39" y1="30.005" x2="-22.52" y2="30" width="0" layer="20"/>
+<wire x1="-25.8" y1="30.005" x2="-22.4" y2="33.405" width="0" layer="20" curve="-90"/>
+<wire x1="-22.4" y1="33.405" x2="-17.61" y2="33.405" width="0" layer="20"/>
+<wire x1="-17.61" y1="33.405" x2="-17.595" y2="33.405" width="0" layer="20"/>
+<wire x1="-25.805" y1="11.5" x2="-25.805" y2="8.01" width="0" layer="20"/>
+<wire x1="-25.805" y1="8.01" x2="-22.405" y2="4.61" width="0" layer="20" curve="90"/>
+<wire x1="-22.405" y1="4.61" x2="-17.61" y2="4.61" width="0" layer="20"/>
+<wire x1="-15.99" y1="0" x2="-17.61" y2="4.61" width="0" layer="20"/>
+<wire x1="-17.61" y1="33.405" x2="-15.99" y2="38" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -830,7 +838,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="-8.15" y="32.35" size="1.27" layer="27" font="vector" rot="R180"/>
 </element>
 <element name="C1" library="rcl" package="R/2012-12R" value="10uF" x="-14.75" y="15.95" smashed="yes" rot="MR0">
-<attribute name="NAME" x="-10.589178125" y="15.2865" size="1.27" layer="26" rot="MR0"/>
+<attribute name="NAME" x="-11.559178125" y="13.1465" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="-12.8" y="13.625" size="1.27" layer="28" rot="MR0"/>
 </element>
 <element name="K1" library="Mini_usb" package="MINIUSB" value="USBMINIB" x="-23.3" y="19" smashed="yes" rot="MR90">
