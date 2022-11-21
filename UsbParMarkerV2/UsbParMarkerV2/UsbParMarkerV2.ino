@@ -35,8 +35,8 @@ const String Serialno;
 const String HwVer;
 
 void setup() {
-  //writeStringToEEPROM(10, "S01067");    //Use ones to program te serial number in the device
-  //writeStringToEEPROM(20, "HW3");    //Use ones to program the hardware version in the device
+ // writeStringToEEPROM(10, "S01085");    //Use ones to program te serial number in the device
+// writeStringToEEPROM(20, "HW1");    //Use ones to program the hardware version in the device
   
   DDRD = 0xFF; //PortD all pins output
   PORTD = 0x00;
