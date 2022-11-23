@@ -20,7 +20,7 @@ To put the Usb Parmarker in command mode, (re)open the serial port at 4800 baud.
 | Ping  | P    | Pong,Device | string ||
 | Leds On  |  L  | LedsOn | string |Works HW >= 3|
 | Leds Off  |  O  | LedsOff | string|Works HW >= 3|
-| Led Test  |  F  | LedTest | string|Works HW >= 3, will flash leds 2x with 1000ms interval|
+| Led Test  |  F  | LedTest | string|Works HW >= 2, will flash leds 2x with 1000ms interval|
 
 <!-- Timing -->
 ## Timing
