@@ -39,7 +39,7 @@ void handlecommands() {
     case 'P':
       Serial.println("Pong,UsbParMarker");
       break;
-//#ifdef HwVer "HW3"
+    //#ifdef HwVer "HW3"
     case 'L':
       digitalWrite(LEDCC, LOW);
       Serial.println("LedsOn");
@@ -48,9 +48,18 @@ void handlecommands() {
       digitalWrite(LEDCC, HIGH);
       Serial.println("LedsOff");
       break;
-//#endif
-
-
+    case 'F':
+      digitalWrite(LEDCC, LOW);
+      PORTD = 0x00;
+      Serial.println("LedTest");
+      for (int i = 1; i <= 2; i++) {
+        PORTD = 0xFF;
+        delay(1000);
+        PORTD = 0x00;
+        delay(1000);
+      }
+      break;
+    //#endif
     default:
       Serial.println("Unknown command");
       break;
