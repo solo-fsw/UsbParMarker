@@ -7,7 +7,7 @@ The Usb Parmarker is a replacement for parallel port to send markers.
 
 <!-- Data mode -->
 ## Data Mode
-To send a value to Usb Parmarker, just send a bytes at 115200 baud. From version 1.5 9600 baud wil also do.
+To send a value to Usb Parmarker, just send a bytes at 115200 baud. From version 1.5 9600 baud wil also do to make the Usb Parmarker compatible with Tobii Pro Lab.
 
 
 <!-- Command mode -->
