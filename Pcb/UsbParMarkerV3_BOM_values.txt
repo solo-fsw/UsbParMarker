@@ -1,0 +1,18 @@
+Partlist exported from C:/Github/UsbParMarker/Pcb/UsbParMarkerV3.sch at 30-1-2023 09:55
+
+Qty Value           Device            Parts                                                  Library      Description                                   FARNELL RS      
+1   ATMEGA32U4-XUAU ATMEGA32U4-XUAU   IC1                                                    SmartPrj                                                           715-3805
+2   100N            C-EUC0805         C2, C6                                                 rcl          CAPACITOR, European symbol                                    
+1   100n            C-EUC0805         C3                                                     rcl          CAPACITOR, European symbol                                    
+1   1uF             C-EUC0805         C5                                                     rcl          CAPACITOR, European symbol                                    
+2   22p             C-EUC0805         C7, C8                                                 rcl          CAPACITOR, European symbol                    1759489         
+1   10uF            CPOL-EUR/2012-12R C1                                                     rcl          POLARIZED CAPACITOR, European symbol                          
+1   F25K            F25K              K2                                                     hs-ul        SubD-Buchse korrigiert und verschönert                        
+1   10uH            INDUCTOR0805      L2                                                     microbuilder Inductors                                     2215650         
+8                   LEDCHIP-LED0805   LEDD0, LEDD1, LEDD2, LEDD3, LEDD4, LEDD5, LEDD6, LEDD7 led          LED                                                           
+1   10K             R-EU_R0603        R5                                                     rcl          RESISTOR, European symbol                                     
+2   22              R-EU_R0603        R2, R3                                                 rcl          RESISTOR, European symbol                                     
+8   ?               R-EU_R0603        R1, R4, R6, R7, R8, R9, R10, R11                       rcl          RESISTOR, European symbol                                     
+2                   SJ3P              SJ1, SJ2                                               hs-ul        Lötbrücke 3pol.                                               
+1   USBMINIB        USBMINIB          K1                                                     Mini_usb                                                                   
+1   16Mhz           XTALNX5032        X1                                                     adafruit     Low cost SMT crystals, no capacitors included 2467791         
