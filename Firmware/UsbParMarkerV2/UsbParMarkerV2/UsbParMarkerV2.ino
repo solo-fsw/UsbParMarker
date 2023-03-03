@@ -47,7 +47,19 @@ void setup() {
   Serialno = readStringFromEEPROM(10);
   HwVer= readStringFromEEPROM(20);
   Version = String(HwVer + ":" + SwVer);   // Set HW version always 
-}
+
+// #################################### Keep the code lines below in the same order ################################################
+  TXLED0
+  // The macro TXLED0 above is intentionally there to make compilation crash if it is defined as "PORTD |= (1<<5)".
+  // TXLED0 should be defined empty, or it will cause DATA3 (and LED3 if enabled) to turn on when sending serial data (an answer)
+  // like "Pong,UsbParMarker" after receiving the "P" command for example.
+  // Using "#undef TXLED0" does not work (any longer) as apparently the TXLED0 macro is preprocessed before this ino file.
+  // To prevent this problem (and this error); change "#define TXLED0			PORTD |= (1<<5)" to "#define TXLED0" on line 95 in:
+  // C:\Users\<USER>\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\leonardo\pins_arduino.h
+
+} // Compilation error on this line? Read comments above!
+// #################################### Keep the code lines above in the same order ################################################
+
 
 void loop() {
   if (Serial.baud() == 115200 || Serial.baud() == 9600 ) {    //data mode
