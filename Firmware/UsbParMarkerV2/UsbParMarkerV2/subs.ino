@@ -42,11 +42,11 @@ void handlecommands() {
     //#ifdef HwVer "HW3"
     case 'L':
       digitalWrite(LEDCC, LOW);
-      Serial.println("LedsOn");
+      Serial.println("LedsEnabled");
       break;
     case 'O':
       digitalWrite(LEDCC, HIGH);
-      Serial.println("LedsOff");
+      Serial.println("LedsDisabled");
       break;
     case 'F':
       digitalWrite(LEDCC, LOW);
