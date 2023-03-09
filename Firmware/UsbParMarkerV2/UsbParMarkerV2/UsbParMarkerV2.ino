@@ -21,7 +21,7 @@
 */
 
 #undef TX_RX_LED_INIT  //DDRD |= (1<<5), DDRB |= (1<<0)
-#undef TXLED0    //  PORTD |= (1<<5)
+//#undef TXLED0    //  PORTD |= (1<<5)
 #undef TXLED1    //  PORTD &= ~(1<<5)
 #undef RXLED0    //  PORTB |= (1<<0)
 #undef RXLED1    //  PORTB &= ~(1<<0)
