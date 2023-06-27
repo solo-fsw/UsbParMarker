@@ -40,6 +40,6 @@ Yellow line is the parallel output and the blue line the Usb Parmarker
 Avarage delay is 51us and peak 72us, tested with 50 trials.
 
 ## How to use
-In Python, the [marker_management](https://github.com/solo-fsw/python-markers) library can be used.
-In OpenSesame, the [markers plugin](https://github.com/solo-fsw/opensesame_plugin_markers) can be used.
-In E-Prime, the [Markers package](https://github.com/solo-fsw/eprime_package_markers) can be used.
+- In Python, the [marker_management](https://github.com/solo-fsw/python-markers) library can be used.
+- In OpenSesame, the [markers plugin](https://github.com/solo-fsw/opensesame_plugin_markers) can be used.
+- In E-Prime, the [Markers package](https://github.com/solo-fsw/eprime_package_markers) can be used.
