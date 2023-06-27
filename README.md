@@ -1,7 +1,8 @@
 <!-- About -->
 ## UsbParMarker
 The UsbParMarker is a USB to parallel cable and is a replacement for the parallel port (LPT) to send markers. No modern laptop has a parallel port anymore nor a possibilty to use a dock with parallel port. To send markers from desktop or laptop the UsbParMarker can be used. 
-<p>From version 1.5 the Usb Parmarker is also compatible with Tobii Pro Lab. In Tobii Pro Lab choose **Brain Products Triggerbox** as TTL device. 
+
+From version 1.5 the Usb Parmarker is also compatible with Tobii Pro Lab. In Tobii Pro Lab choose **Brain Products Triggerbox** as TTL device. 
 
 <!-- Data mode -->
 ## Data Mode
@@ -36,7 +37,7 @@ Loop
 
 ![DS1Z_QuickPrint15](https://user-images.githubusercontent.com/98744988/178240745-d304212d-964e-4b7c-9ecf-02f4bde72d45.png)
 
-Yellow line is the parallel output and the blue line the Usb Parmarker
+The yellow line is the parallel output and the blue line the Usb Parmarker
 Avarage delay is 51us and peak 72us, tested with 50 trials.
 
 ## How to use
