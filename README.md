@@ -44,3 +44,44 @@ Avarage delay is 51us and peak 72us, tested with 50 trials.
 - In Python, the [marker_management](https://github.com/solo-fsw/python-markers) library can be used.
 - In OpenSesame, the [markers plugin](https://github.com/solo-fsw/opensesame_plugin_markers) can be used.
 - In E-Prime, the [Markers package](https://github.com/solo-fsw/eprime_package_markers) can be used.
+
+# MATLAB
+The code below finds all suitable serial devices and connects to the first (or only) device. Note, MATLAB 2019b or newer is required. Use the functions to send and reset the markers.
+
+``` matlab
+% Init:
+clear; close all; clc;
+
+% Find serial device:
+serial_vid = "2341";  % Arduino VID
+serial_pid = "8036";  % Leonardo PID
+serial_expr = "^\s*(COM\d*)\s*USB\\VID\_" + serial_vid + "\&PID_" + serial_pid + ".*$";
+[~, serial_devices] = system("wmic path Win32_SerialPort get PNPDeviceID, DeviceID");
+[com_ports, ~] = regexp(serial_devices, serial_expr,'tokens','once','lineanchors');
+assert(~isempty(com_ports), 'No matching serial devices found.')
+
+% Use the first Leonardo:
+com_port = com_ports{1};
+if length(com_ports)>1
+    warning("First COM port (out of multiple) selected.")
+end
+
+% Open serial port:
+try
+    ser = serialport(com_port, 115200);
+catch me
+    error("Markers:OpenSerial" , "Could not open marker device: %s", me.message)
+end
+
+% Functions to send markers:
+send_marker = @(val) ser.write(val,'UINT8');
+reset_marker = @() ser.write(0,'UINT8');
+
+% Send half-second marker:
+send_marker(255)
+pause(0.5)
+reset_marker()
+
+% Disconnect:
+delete(ser);
+```
