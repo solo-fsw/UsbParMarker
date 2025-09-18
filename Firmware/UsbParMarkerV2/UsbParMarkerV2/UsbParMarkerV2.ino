@@ -32,24 +32,25 @@
 
 //Globals
 const String SwVer = "SW1.7";
-const String Version; 
+const String Version;
 const String Serialno;
 const String HwVer;
 
 void setup() {
- writeStringToEEPROM(10, "S01116");    //Use ones to program te serial number in the eeprom of the device
- writeStringToEEPROM(20, "HW1");    //Use ones to program the hardware version in the eeprom of the device
-  
+ //writeStringToEEPROM(10, "S01020");    //Use ones to program te serial number in the eeprom of the device
+ //writeStringToEEPROM(20, "HW2");    //Use ones to program the hardware version in the eeprom of the device
+
   DDRD = 0xFF; //PortD all pins output
   PORTD = 0x00;
+  //PORTD = 0xFF; //Inverted output
   pinMode(LEDCC, OUTPUT);
   digitalWrite(LEDCC, LOW);
   Serial.begin(115200);     // opens serial port, sets data rate to 115200 bps
   Serialno = readStringFromEEPROM(10);
-  HwVer= readStringFromEEPROM(20);
-  Version = String(HwVer + ":" + SwVer);   // Set HW version always 
+  HwVer = readStringFromEEPROM(20);
+  Version = String(HwVer + ":" + SwVer);   // Set HW version always
 
-// #################################### Keep the code lines below in the same order ################################################
+  // #################################### Keep the code lines below in the same order ################################################
   TXLED0
   // The macro TXLED0 above is intentionally there to make compilation crash if it is defined as "PORTD |= (1<<5)".
   // TXLED0 should be defined empty, or it will cause DATA3 (and LED3 if enabled) to turn on when sending serial data (an answer)
@@ -66,6 +67,7 @@ void loop() {
   if (Serial.baud() == 115200 || Serial.baud() == 9600 ) {    //data mode
     if (Serial.available() > 0) {
       PORTD = Serial.read();       //send marker to output port
+      //PORTD = 255- Serial.read();       //send marker to output port Inverted Output
     }
   }
   else if (Serial.baud() == 4800) { //command mode
