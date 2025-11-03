@@ -14,6 +14,7 @@
   20220711  1.5 To Make the UsbParmarker compatibel with the BrainBox Trigger box for Tobii Pro Lab, added 9600 baud for data mode
   20221123  1.6 Added F command to test leds and attached hardware
   20230309  1.7 Added TXLED0 empty check (JdH)
+  20251030  1.7 Changed default HW version to HW4, and <USER> to %USERNAME%. SW version remains SW1.7 (ES).
 
 */
 
@@ -37,8 +38,8 @@ const String Serialno;
 const String HwVer;
 
 void setup() {
- //writeStringToEEPROM(10, "S01020");    //Use ones to program te serial number in the eeprom of the device
- //writeStringToEEPROM(20, "HW2");    //Use ones to program the hardware version in the eeprom of the device
+ //writeStringToEEPROM(10, "S00000");    //Use ones to program te serial number in the eeprom of the device
+ //writeStringToEEPROM(20, "HW4");    //Use ones to program the hardware version in the eeprom of the device
 
   DDRD = 0xFF; //PortD all pins output
   PORTD = 0x00;
@@ -57,7 +58,7 @@ void setup() {
   // like "Pong,UsbParMarker" after receiving the "P" command for example.
   // Using "#undef TXLED0" does not work (any longer) as apparently the TXLED0 macro is preprocessed before this ino file.
   // To prevent this problem (and this error); change "#define TXLED0			PORTD |= (1<<5)" to "#define TXLED0" on line 95 in:
-  // C:\Users\<USER>\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\leonardo\pins_arduino.h
+  // C:\Users\%USERNAME%\AppData\Local\Arduino15\packages\arduino\hardware\avr\1.8.6\variants\leonardo\pins_arduino.h
 
 } // Compilation error on this line? Read comments above!
 // #################################### Keep the code lines above in the same order ################################################
