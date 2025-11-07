@@ -90,6 +90,8 @@ The code snippet below shows how to connect to the device and send a marker.
 import serial
 import time
 
+# IMPORTANT: Change the address below ('COM4') to fit your device.
+
 # Open serial port with specific parameters:
 params = {"baudrate": 115200, "bytesize": 8, "parity": 'N', "stopbits": 1, "timeout": 2}
 ser = serial.Serial('COM4', **params)
@@ -121,6 +123,8 @@ time.sleep(1)
 The code below finds all suitable serial devices and connects to the first (or only) device. Note, MATLAB 2019b or newer is required. Use the functions to send and reset the markers.
 
 ``` matlab
+% IMPORTANT: Change the address below ('COM4') to fit your device.
+
 % Create serial object:
 s = serialport('COM4', 115200 ...
     , 'DataBits', 8 ...
