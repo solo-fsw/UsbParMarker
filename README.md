@@ -10,11 +10,11 @@ The UsbParMarker and it accompanying code was developed by the [Research and Lab
 
 # Features and Attributes
 The latest version of the UsbParMarker running the latest firmware features:
- - A Mini-USB-Mini socket for connecting the device to a computer.
+ - A Mini-USB socket for connecting the device to a computer.
  - A female DB25 connector for output.
- - Disableable LED's visualizing the 8 bit states.
+ - Disableable LED's visualizing the 8 bit-states.
  - Jackscrews (4-40 UNC) for secure mounting.
- - A strap loop for attaching the device to things.
+ - A strap-loop for attaching the device to things.
 
 ## Serial Connection
 When sending markers, the UsbParMarker connects as a virtual serial (COM) device using the following properties:'
