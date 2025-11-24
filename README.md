@@ -160,24 +160,24 @@ s.delete();
 
 
 # Timing
-Timing is tested with a simple E-prime 3.0.380 script that first sends a marker to the parallel port and then to the UsbParMarker serial port.
+Timing is tested with a simple E-prime 3.0.3.219 script that first sends a marker to the parallel port and then to the UsbParMarker serial port.
 
 ```
-Do
-writeport LPTAddress ,1
-serialmarker.WriteByte 1
-sleep (30)
-writeport LPTAddress,0
-serialmarker.WriteByte 0
-sleep (3000)
-Loop
+Dim i As Integer
+For i = 1 To 50
+	WritePort "&H4FF8", 1
+	UsbParMarker1.WriteByte 1
+	sleep (30)
+	WritePort "&H4FF8", 0
+	UsbParMarker1.WriteByte 0
+	sleep (3000)
+Next i
 ```
+See [this page](https://github.com/solo-fsw/eprime_package_markers/tree/main/Samples#add-serial-devices) on how to configure `UsbParMarker1`.
 
+![Screenshot of oscilloscope](https://github.com/user-attachments/assets/0887807e-9077-4ae2-bc66-886a4e16fab2)
 
-![DS1Z_QuickPrint15](https://user-images.githubusercontent.com/98744988/178240745-d304212d-964e-4b7c-9ecf-02f4bde72d45.png)
-
-Yellow line is the parallel output and the blue line the Usb Parmarker
-Avarage delay is 51us and peak 72us, tested with 50 trials.
+Yellow line is the parallel output and the blue line the UsbParMarker. Avarage delay is 58us and peak 86us, tested with 50 trials.
 
 # Advanced
 The custom PCB schematic is shown below:
