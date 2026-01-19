@@ -5,6 +5,7 @@
   HW1 - There are 3 version for HW1, Initial version without leds, test version with high leds, and version with leds
   HW2 - Version with leds, there are 2 versions, test version with high leds, and version with smd flat leds
   HW3 - Added LedCC wire to make it possible to enable/disable all the leds
+  HW4 - Same as HW3 but pcb shape changed for custom enclosure ES
 
   20180110  1.0 Initial release
   20220214  1.1 Added command mode to make it possible for reading serial number, from this version also SOLO qr sticker needs to be applied
