@@ -1,0 +1,19 @@
+| D25 | CpuPin | Alternative     | Port | Arduino |
+|-----|--------|-----------------|------|---------|
+| 1   | 8      | SS/PCINT0       | PB0  | D17     |
+| 2   | 18     | OC0B/SCL/INT0    | PD0  | D3      |
+| 3   | 19     | SDA/INT         | PD1  | D2      |
+| 4   | 20     | RXD1/AIN1/INT2  | PD2  | D0      |
+| 5   | 21     | TXD1/INT3       | PD3  | D1      |
+| 6   | 25     | ICP1/ADC8       | PD4  | D4/A6   |
+| 7   | 22     | XCK1/#CTS       | PD5  | D30     |
+| 8   | 26     | T1/#OC4D/ADC9   | PD6  | D12/A11 |
+| 9   | 27     | T0/OC4D/ADC10   | PD7  | D6/A7   |
+| 10  | 36     | ADC7/TDI        | PF7  | A0/D18  |
+| 11  | 37     | ADC6/TDO        | PF6  | A1/D19  |
+| 12  | 38     | ADC5/TMS        | PF5  | A2/D20  |
+| 13  | 39     | ADC4/TCK        | PF4  | A3/D21  |
+| 14  | 9      | SCLK/PCINT1     | PB1  | D15     |
+| 15  | 40     | ADC1            | PF1  | A4/D22  |
+| 16  | 10     | PDI/MOSI/PCINT2 | PB2  | D16     |
+| 17  | 11     | PD0/MOSI/PCINT2 | PB3  | D14     |
